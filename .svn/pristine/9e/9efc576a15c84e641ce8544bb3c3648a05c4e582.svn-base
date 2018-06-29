@@ -1,0 +1,72 @@
+//
+//  API.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/6/4.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import Foundation
+let USHARE_APPKEY = "5b2b5135f29d987cfe00001b"
+let WX_APPKEY = "wx2ff698af485dfec4"
+let WX_Secret = "9f664cc93786ed3decb15a2589276be8"
+let QQ_APPKEY = "1106960318"
+let QQ_Secret = "Nwa6o8kmtckjCz81"
+
+
+let shunshun_systemoptions = "/api/systemoptions"
+/***********************************************************************************/
+/********** user ***************/
+/***********************************************************************************/
+let users_sendIdentifyingCode = "/api/users/sendIdentifyingCode" //发送验证码
+let users_register = "/api/users/register" //会员注册
+let users_login = "/api/users/login" //用户登录
+let users_getusermsg = "/api/users/getusermsg" //根据token或者userId获取用户信息
+let users_loginByMobile = "/api/users/loginByMobile" //根据手机号登录
+let users_resetPwd = "/api/users/resetPwd" //忘记密码
+let users_favoriteGoods = "/api/users/favoriteGoods" //收藏
+let users_getmygoods = "/api/users/getmygoods" //根据状态获取我（买到的、卖出的）的商品
+let users_getmypublishgoods = "/api/users/getmypublishgoods" //根据状态获取我发布的的商品
+let users_setNickname = "/api/users/setNickname" //设置昵称
+
+let users_setPhone = "/api/users/setPhone" //设置昵称
+let users_setPwd = "/api/users/setPwd" //设置昵称
+let users_setHeadImg = "/api/users/setHeadImg" //设置头像
+
+
+
+
+
+
+
+/***********************************************************************************/
+/********** shop ***************/
+/***********************************************************************************/
+
+let shop_getGoodsList = "/api/shop/getGoodsList" //获取商品
+let shop_getGoodsCateList = "/api/shop/getGoodsCateList" //获取商品分类
+let shop_getGoodsDetail = "/api/shop/getGoodsDetail" //获取商品分类
+let shop_comment = "/api/shop/comment" //获取商品分类
+let shop_createGoods = "/api/shop/createGoods" //发布商品
+let shop_getGoodsFavorite = "/api/shop/getGoodsFavorite" //获取商品分类
+let shop_delePreGood = "/api/shop/delePreGood" //获取商品分类
+let shop_preReleaseGood = "/api/shop/preReleaseGood"//草稿箱
+
+/***********************************************************************************/
+/********** common ***************/
+/***********************************************************************************/
+let common_getToken = "/api/common/getToken" //获取七牛token
+
+/***********************************************************************************/
+/********** order ***************/
+/***********************************************************************************/
+let order_expressGoods = "/api/order/expressGoods" //卖家发货
+
+/***********************************************************************************/
+/********** Pay ***************/
+/***********************************************************************************/
+let alipay_appPay = "/api/alipay/appPay" //支付宝APP支付
+
+
+
+

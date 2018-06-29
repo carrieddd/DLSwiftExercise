@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DLRegisterController" customModule="LJSecondhandPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="codeTF" destination="OVk-OC-0GX" id="BQw-hn-hEA"/>
+                <outlet property="mobileTF" destination="Fqi-x6-U45" id="Nph-Bf-nsf"/>
+                <outlet property="psdTF" destination="Tg1-8E-76U" id="iV3-hM-sTF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWs-as-ti1">
+                    <rect key="frame" x="30" y="84" width="315" height="162"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2z0-JP-GC5">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="54"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zd-nc-6aw" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53" width="315" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Gvg-qX-5SS"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqi-x6-U45" customClass="DLDefaultTextField1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="53"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="5c8-0B-4F7"/>
+                                <constraint firstItem="Fqi-x6-U45" firstAttribute="top" secondItem="2z0-JP-GC5" secondAttribute="top" id="7LS-oQ-kZA"/>
+                                <constraint firstItem="5zd-nc-6aw" firstAttribute="leading" secondItem="2z0-JP-GC5" secondAttribute="leading" id="8Zd-Xb-v4c"/>
+                                <constraint firstItem="Fqi-x6-U45" firstAttribute="leading" secondItem="2z0-JP-GC5" secondAttribute="leading" id="9cS-OH-x2Y"/>
+                                <constraint firstAttribute="trailing" secondItem="5zd-nc-6aw" secondAttribute="trailing" id="U4Y-6w-SXY"/>
+                                <constraint firstAttribute="bottom" secondItem="5zd-nc-6aw" secondAttribute="bottom" id="YqV-xM-Lau"/>
+                                <constraint firstAttribute="trailing" secondItem="Fqi-x6-U45" secondAttribute="trailing" id="iku-Ra-HH7"/>
+                                <constraint firstItem="5zd-nc-6aw" firstAttribute="top" secondItem="Fqi-x6-U45" secondAttribute="bottom" id="s0f-k4-60C"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-M1-JkZ">
+                            <rect key="frame" x="0.0" y="54" width="315" height="54"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-jM-Sjh" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53" width="315" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="onE-8W-KwI"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-OC-0GX" customClass="DLDefaultTextField1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="239" height="53"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAP-pZ-78c" customClass="DLMobileCodeButton" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="247" y="14.5" width="68" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="68" id="6V5-16-34b"/>
+                                        <constraint firstAttribute="height" constant="25" id="lBU-3O-PfB"/>
+                                    </constraints>
+                                    <state key="normal" title=" 获取验证码  "/>
+                                    <connections>
+                                        <action selector="getMobileCode:" destination="-1" eventType="touchUpInside" id="Ndk-Zx-xyx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="OVk-OC-0GX" firstAttribute="leading" secondItem="7A3-M1-JkZ" secondAttribute="leading" id="5pd-bh-d1I"/>
+                                <constraint firstItem="BAP-pZ-78c" firstAttribute="centerY" secondItem="OVk-OC-0GX" secondAttribute="centerY" id="Hjg-bT-a47"/>
+                                <constraint firstItem="t6n-jM-Sjh" firstAttribute="leading" secondItem="7A3-M1-JkZ" secondAttribute="leading" id="Iij-0M-79f"/>
+                                <constraint firstAttribute="trailing" secondItem="BAP-pZ-78c" secondAttribute="trailing" id="Lo4-Jh-93Z"/>
+                                <constraint firstItem="OVk-OC-0GX" firstAttribute="top" secondItem="7A3-M1-JkZ" secondAttribute="top" id="OLz-dE-t1C"/>
+                                <constraint firstItem="t6n-jM-Sjh" firstAttribute="top" secondItem="OVk-OC-0GX" secondAttribute="bottom" id="bAA-lU-sCA"/>
+                                <constraint firstItem="BAP-pZ-78c" firstAttribute="leading" secondItem="OVk-OC-0GX" secondAttribute="trailing" constant="8" id="dS4-fj-FDg"/>
+                                <constraint firstAttribute="bottom" secondItem="t6n-jM-Sjh" secondAttribute="bottom" id="fSE-Qm-ujA"/>
+                                <constraint firstAttribute="height" constant="54" id="mxW-uf-ssO"/>
+                                <constraint firstAttribute="trailing" secondItem="t6n-jM-Sjh" secondAttribute="trailing" id="obQ-xc-OWF"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnE-zF-tgb">
+                            <rect key="frame" x="0.0" y="108" width="315" height="54"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54c-Y8-hM5" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53" width="315" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="5of-fC-wB5"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tg1-8E-76U" customClass="DLDefaultTextField1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="53"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="54c-Y8-hM5" secondAttribute="bottom" id="0CU-IU-wYp"/>
+                                <constraint firstAttribute="height" constant="54" id="0su-cY-mYV"/>
+                                <constraint firstAttribute="trailing" secondItem="Tg1-8E-76U" secondAttribute="trailing" id="1I5-JS-JE0"/>
+                                <constraint firstItem="Tg1-8E-76U" firstAttribute="top" secondItem="PnE-zF-tgb" secondAttribute="top" id="2JU-pD-vV5"/>
+                                <constraint firstItem="Tg1-8E-76U" firstAttribute="leading" secondItem="PnE-zF-tgb" secondAttribute="leading" id="2c4-Hr-9tt"/>
+                                <constraint firstAttribute="trailing" secondItem="54c-Y8-hM5" secondAttribute="trailing" id="87h-la-YuI"/>
+                                <constraint firstItem="54c-Y8-hM5" firstAttribute="leading" secondItem="PnE-zF-tgb" secondAttribute="leading" id="bwe-K1-9X2"/>
+                                <constraint firstItem="54c-Y8-hM5" firstAttribute="top" secondItem="Tg1-8E-76U" secondAttribute="bottom" id="pQZ-OO-3so"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PnE-zF-tgb" firstAttribute="top" secondItem="7A3-M1-JkZ" secondAttribute="bottom" id="Cjz-UY-rjH"/>
+                        <constraint firstItem="7A3-M1-JkZ" firstAttribute="leading" secondItem="gWs-as-ti1" secondAttribute="leading" id="D2L-aL-Y2f"/>
+                        <constraint firstAttribute="trailing" secondItem="PnE-zF-tgb" secondAttribute="trailing" id="Lnf-ph-Mxx"/>
+                        <constraint firstAttribute="bottom" secondItem="PnE-zF-tgb" secondAttribute="bottom" id="Ncc-53-i8G"/>
+                        <constraint firstItem="PnE-zF-tgb" firstAttribute="leading" secondItem="gWs-as-ti1" secondAttribute="leading" id="QDs-0w-Cbk"/>
+                        <constraint firstItem="7A3-M1-JkZ" firstAttribute="top" secondItem="2z0-JP-GC5" secondAttribute="bottom" id="cBB-7H-wuo"/>
+                        <constraint firstItem="2z0-JP-GC5" firstAttribute="leading" secondItem="gWs-as-ti1" secondAttribute="leading" id="cCi-7Z-Ax4"/>
+                        <constraint firstAttribute="trailing" secondItem="2z0-JP-GC5" secondAttribute="trailing" id="e8l-fO-v5a"/>
+                        <constraint firstItem="2z0-JP-GC5" firstAttribute="top" secondItem="gWs-as-ti1" secondAttribute="top" id="pHY-jb-oel"/>
+                        <constraint firstAttribute="trailing" secondItem="7A3-M1-JkZ" secondAttribute="trailing" id="x3n-Fy-5jQ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYD-cG-Md8" customClass="DLDefaultButton" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                    <rect key="frame" x="30" y="310" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Alo-O2-fLc"/>
+                    </constraints>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="login" destination="-1" eventType="touchUpInside" id="Laz-Be-xX3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-Ze-goJ" customClass="C66Btn_14" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                    <rect key="frame" x="126" y="583" width="123" height="30"/>
+                    <state key="normal" title="已有账号？去登录"/>
+                    <connections>
+                        <action selector="mobileLogin:" destination="-1" eventType="touchUpInside" id="opB-eB-hDd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UYD-cG-Md8" secondAttribute="trailing" constant="30" id="8nf-cv-60d"/>
+                <constraint firstItem="EHu-Ze-goJ" firstAttribute="centerX" secondItem="UYD-cG-Md8" secondAttribute="centerX" id="KEF-fm-kg6"/>
+                <constraint firstItem="gWs-as-ti1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="S9C-Ha-2Xz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EHu-Ze-goJ" secondAttribute="bottom" constant="54" id="SXh-qq-nZG"/>
+                <constraint firstItem="gWs-as-ti1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="TvP-dK-XbU"/>
+                <constraint firstItem="UYD-cG-Md8" firstAttribute="top" secondItem="gWs-as-ti1" secondAttribute="bottom" constant="64" id="VjT-jA-NaJ"/>
+                <constraint firstItem="UYD-cG-Md8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="WDc-3s-Sy6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gWs-as-ti1" secondAttribute="trailing" constant="30" id="pwU-OF-A54"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

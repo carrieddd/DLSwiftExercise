@@ -1,0 +1,155 @@
+//
+//  DLGeneralList.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/6/11.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import Foundation
+import CRRefresh
+class DLProductGeneralList: DLBaseTableViewController {
+    var cur = 1
+    
+//    var cid:String?
+//    init(catId:String) {
+//        super.init(tableStyle: .grouped)
+//        cid = catId
+//    }
+    
+    var p:[String:String]!
+    
+    init(parameters:[String:String]) {
+        super.init(tableStyle: .grouped)
+        p = parameters
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.cr.beginHeaderRefresh()
+
+    }
+    
+    override func initTableView() {
+        super.initTableView()
+        tableView.registerNib(nibName: "DLHomeBaseCell")
+        tableView.snp.remakeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottomMargin.equalTo(18)
+        }
+        
+        
+        tableView.cr.addHeadRefresh(animator:FastAnimator()) { [weak self] in
+            self?.cur = 1
+            self?.request {
+                self?.tableView.cr.endHeaderRefresh()
+            }
+        }
+        
+        tableView.cr.addFootRefresh(animator:NormalFooterAnimator()) { [weak self] in
+            self?.cur += 1
+            self?.request {
+                self?.tableView.cr.endLoadingMore()
+            }
+        }
+    }
+    
+        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension DLProductGeneralList:contentImageClickDelegate{
+    func avaterClick(userId: String) {
+        let v = DLlPersonalGoodsGrid.init(userId: userId)
+        v.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(v, animated: true)
+    }
+    
+    func scrollClick(goodId:String) {
+        let v = DLProductDetialController.init(id:goodId)
+        v.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(v, animated: true)
+    }
+}
+
+extension DLProductGeneralList:UITableViewDataSource {
+        
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datasource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:DLHomeBaseCell = tableView.dequeueReusableCell(withIdentifier: "DLHomeBaseCell") as!DLHomeBaseCell
+        cell.model = datasource[indexPath.row] as! DLGoodsModel
+        cell.contentClickDelegate = self        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = datasource[indexPath.row] as! DLGoodsModel
+        let v = DLProductDetialController.init(id:model.goods?.goodsId ?? "")
+        v.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(v, animated: true)
+    }
+    
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let data = datasource[indexPath.row] as! DLGoodsModel
+        switch data.goodsAlbum?.count {
+        case 1:
+            return 520
+        case 2:
+            return 345
+        case 3:
+            return 400
+        case 4:
+            return 520
+        default:
+            return 275
+        }
+    }
+    
+}
+
+extension DLProductGeneralList:DLselecterDelegate {
+    func selecterViewSelectItem(index: Int) {
+        
+    }
+    
+    func request(handle:(()->Void)?){
+//        let parameters = [
+//            "cid":cid ?? "0",
+//            "keyword":"",
+//            "page":"\(cur)",
+//            "rows":"25"] as [String : Any]
+        p["page"] = "\(cur)"
+        p["rows"] = "25"
+
+        DLNewWork.request(url: shop_getGoodsList,method:.get, parameters: p, succeed: { [weak self](result) in
+            let dict:[String:Any] = result as! Dictionary
+            let datas:[[String:Any]] = dict["datas"] as! [[String : Any]]
+            if self?.cur == 1{self?.datasource.removeAll()}
+            self?.datasource.append(contentsOf: datas.map{DLGoodsModel.deserialize(from:$0)!})
+            self?.tableView.reloadData()
+            handle?()
+            }, failure: {
+                SVProgressHUD.showInfo(withStatus: $0)
+                print($0)
+                handle?()
+        })
+    }
+}

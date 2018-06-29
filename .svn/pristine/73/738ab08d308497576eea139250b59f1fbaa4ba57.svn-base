@@ -1,0 +1,270 @@
+              //
+//  DLHomeBaseCell.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/5/28.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import UIKit
+
+class DLHomeBaseCell: UITableViewCell {
+
+    var contentClickDelegate:contentImageClickDelegate?
+
+    @IBOutlet weak var contentBGView: UIView!
+    @IBOutlet weak var nicknameLbl: UILabel!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var commentCount: UIButton!
+    @IBOutlet weak var browseCount: UIButton!
+    @IBOutlet weak var favoriteCount: UIButton!
+    @IBOutlet weak var nowPrice: UILabel!
+    @IBOutlet weak var originalPrice: UILabel!
+    @IBOutlet weak var goodsName: UILabel!
+    @IBOutlet weak var cateId: UILabel!
+
+    @IBOutlet weak var avater_btn: UIButton!
+    
+    
+    
+    private var _model:DLGoodsModel?
+    var model:DLGoodsModel{
+        get{
+            return _model!
+        }
+        set{
+            _model = newValue
+            imageGroup = (newValue.goodsAlbum?.map{$0.image ?? ""}) ?? []
+            
+            let shit2 = NSString.numberSuitScanf(newValue.user?.username) ?? ""
+            nicknameLbl.text = NSString.isEmpty(newValue.user?.nickname) ?
+                shit2 :
+                newValue.user?.nickname ?? ""
+            avater.setImageWith(URL.init(string: newValue.user?.avatar ?? ""), for: .normal, placeholder: UIImage.init(named: "avater_d"))
+//            city.text = newValue.goodsCount?.province
+
+            let dateString:String = newValue.goodsCount?.ownerLastViewtime ?? ""
+            let string = NSString.formattedDate(dateString, style: "yyyy-MM-ddHH:mm:ss")
+            var locate = "\(newValue.goodsCount?.province ?? "")\(newValue.goodsCount?.city ?? "")\(newValue.goodsCount?.area ?? "") \(string ?? "刚刚")来过"
+            
+            if newValue.goodsCount?.province ==  newValue.goodsCount?.city{
+                locate = "\(newValue.goodsCount?.province ?? "")\(newValue.goodsCount?.area ?? "") \(string ?? "刚刚")来过"
+            }
+            city.text =  locate
+//            "\(newValue.goodsCount?.province ?? "")   \(string ?? "刚刚")来过"
+            
+            originalPrice.text = "¥\(newValue.goods?.originalPrice ?? "0")"
+            let priceString = NSMutableAttributedString.init(string: originalPrice.text!)
+            priceString.addAttributes([NSAttributedStringKey.strikethroughStyle : NSNumber.init(value: 1)], range: NSRange.init(location: 1, length: priceString.length-1))
+            originalPrice.attributedText = priceString
+            
+            nowPrice.text = "¥\(newValue.goods?.nowPrice ?? "0")"
+            let nowPriceString = NSMutableAttributedString.init(string: nowPrice.text!)
+            nowPriceString.addAttributes([NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12)], range: NSRange.init(location: 0, length: 1))
+            nowPrice.attributedText = nowPriceString
+
+            goodsName.text = "\(newValue.goods?.goodsName ?? "")"
+            commentCount.setTitle(" \(newValue.goodsCount?.commentCount ?? "0") " , for: .normal)
+            favoriteCount.setTitle(" \(newValue.goodsCount?.favoriteCount ?? "0") ", for: .normal)
+            browseCount.setTitle(" \(newValue.goodsCount?.browseCount ?? "0") ", for: .normal)
+            cateId.text = newValue.goodsCate?.cateName
+        }
+    }
+    
+    
+    private var _imageGroup:[String] = []
+    var imageGroup:[String]{
+        get{
+            return _imageGroup
+        }
+        set{
+            _imageGroup = newValue
+            contentBGView.subviews.forEach{$0.removeFromSuperview()}
+            if _imageGroup.count == 1 {
+                contentImgView_type1(imges:_imageGroup)
+            }
+            
+            if _imageGroup.count == 2 {
+                contentImgView_type2(imges:_imageGroup)
+
+            }
+            
+            if _imageGroup.count == 3 {
+                contentImgView_type3(imges:_imageGroup)
+
+            }
+            
+            if _imageGroup.count == 4 {
+                contentImgView_type4(imges:_imageGroup)
+            }
+            
+            if _imageGroup.count > 4 {
+                contentImgView_typeMore(imges:_imageGroup)
+            }
+        }
+    }
+
+    
+    
+    
+    @IBOutlet weak var avater: UIButton!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        ViewRadius(view: avater, radius: 19)
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+    @IBAction func avatarClick() {
+        contentClickDelegate?.avaterClick(userId: _model?.user?.userId ?? "")
+    }
+}
+
+extension DLHomeBaseCell{
+    //一张图片样式
+    func contentImgView_type1(imges:[String]) {
+        let image0 = shitImageView.init(url: imges.first ?? "")
+        self.contentBGView.addSubview(image0)
+        image0.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    //2张图片样式
+    func contentImgView_type2(imges:[String]) {
+        let image0 = shitImageView.init(url: imges.first ?? "")
+        self.contentBGView.addSubview(image0)
+        let image1 = shitImageView.init(url: imges.last ?? "")
+        self.contentBGView.addSubview(image1)
+
+        image0.snp.makeConstraints { (make) in
+            make.left.top.bottom.equalToSuperview()
+        }
+        
+        image1.snp.makeConstraints { (make) in
+            make.right.top.bottom.equalToSuperview()
+            make.left.equalTo(image0.snp.right).offset(8)
+            make.size.equalTo(image0.snp.size)
+        }
+    }
+    
+    //3张图片样式
+    func contentImgView_type3(imges:[String]) {
+        let image0 = shitImageView.init(url: imges.first ?? "")
+        self.contentBGView.addSubview(image0)
+        
+        let image1 = shitImageView.init(url: imges[1] )
+        self.contentBGView.addSubview(image1)
+        
+        let image2 = shitImageView.init(url: imges.last ?? "")
+        self.contentBGView.addSubview(image2)
+        
+        image0.snp.makeConstraints { (make) in
+            make.left.top.bottom.equalToSuperview()
+        }
+        
+        image1.snp.makeConstraints { (make) in
+            make.right.top.equalToSuperview()
+            make.left.equalTo(image0.snp.right).offset(8)
+            make.width.equalTo(image0).dividedBy(2)
+        }
+        
+        image2.snp.makeConstraints { (make) in
+            make.right.bottom.equalToSuperview()
+            make.size.equalTo(image1)
+            make.top.equalTo(image1.snp.bottom).offset(8)
+            make.left.equalTo(image1)
+        }
+
+    }
+    
+    //4张图片样式
+    func contentImgView_type4(imges:[String]) {
+        let image0 = shitImageView.init(url: imges.first ?? "")
+        self.contentBGView.addSubview(image0)
+        
+        let image1 = shitImageView.init(url: imges[1] )
+        self.contentBGView.addSubview(image1)
+        
+        let image2 = shitImageView.init(url: imges[2] )
+        self.contentBGView.addSubview(image2)
+
+        let image3 = shitImageView.init(url: imges.last ?? "")
+        self.contentBGView.addSubview(image3)
+
+        image0.snp.makeConstraints { (make) in
+            make.left.top.equalToSuperview()
+        }
+        
+        image1.snp.makeConstraints { (make) in
+            make.right.top.equalToSuperview()
+            make.left.equalTo(image0.snp.right).offset(8)
+        }
+        
+        image2.snp.makeConstraints { (make) in
+            make.left.bottom.equalToSuperview()
+            make.top.equalTo(image0.snp.bottom).offset(8)
+
+        }
+
+        image3.snp.makeConstraints { (make) in
+            make.right.bottom.equalToSuperview()
+            make.left.equalTo(image2.snp.right).offset(8)
+            make.top.equalTo(image1.snp.bottom).offset(8)
+            make.size.equalTo(image0)
+            make.size.equalTo(image1)
+            make.size.equalTo(image2)
+        }
+    }
+    
+    //多张图片样式
+    func contentImgView_typeMore(imges:[String]) {
+        
+        let scroll = DLClickScroll.init()
+        scroll.backgroundColor = UIColor.white
+        self.contentBGView.addSubview(scroll)
+        scroll.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        scroll.clickDelegate = self
+        var imgMMP:[UIView] = []
+        
+        for (index,value) in imges.enumerated() {
+            let image = shitImageView.init(url:value)
+            scroll.addSubview(image)
+
+            image.snp.makeConstraints { (make) in
+                make.top.equalToSuperview()
+                make.height.equalTo(scroll.snp.height)
+                make.width.equalTo(scroll.snp.height)
+                
+                if index == 0{
+                    make.left.equalToSuperview()
+                }
+                else{
+                    make.left.equalTo(imgMMP[index - 1].snp.right).offset(8)
+                }
+
+                if index == imges.count - 1{
+                    make.right.equalToSuperview().offset(-12)
+                }
+            }
+            imgMMP.append(image)
+        }
+
+    }
+}
+
+              extension DLHomeBaseCell:scrollClickDelegate{
+                func scrollClick() {
+                    self.contentClickDelegate?.scrollClick(goodId: _model?.goods?.goodsId ?? "")
+                }
+              }
+              
+
+              
+              

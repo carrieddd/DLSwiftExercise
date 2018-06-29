@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="DLProductDetialHead" customModule="LJSecondhandPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海浦东  12分钟前来过" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHa-za-QmP" customClass="DLDefaultLabel_d1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="12" y="112.5" width="183" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="sy0-Yb-eIw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="浏览12134" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO1-f0-8Z1" customClass="DLDefaultLabel_d1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="227" y="95.5" width="81" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥399" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CM-il-0Qt" customClass="DLDefaultLabel_hl1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="12" y="85.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原价：599  包运费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-S6-ngM" customClass="DLDefaultLabel_d1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="62" y="88" width="144" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="tfe-Hw-BqN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长毛三花名朵胖，小名胖子、肥肥，体重11.6斤，机智，长相甜美，可卖萌~" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRG-bJ-aLf" customClass="DLDefaultLabel_h0" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="296" height="64"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jca-S6-ngM" firstAttribute="top" secondItem="kRG-bJ-aLf" secondAttribute="bottom" constant="12" id="7Cd-b0-GNv"/>
+                    <constraint firstItem="iHa-za-QmP" firstAttribute="top" secondItem="9CM-il-0Qt" secondAttribute="bottom" constant="6" id="8NA-Y8-Lz7"/>
+                    <constraint firstItem="kRG-bJ-aLf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="9UO-gP-C13"/>
+                    <constraint firstAttribute="trailing" secondItem="DO1-f0-8Z1" secondAttribute="trailing" constant="12" id="FnJ-oH-4KR"/>
+                    <constraint firstAttribute="trailing" secondItem="kRG-bJ-aLf" secondAttribute="trailing" constant="12" id="GXx-bO-37A"/>
+                    <constraint firstAttribute="bottom" secondItem="DO1-f0-8Z1" secondAttribute="bottom" constant="28" id="JrM-7B-yTe"/>
+                    <constraint firstItem="Jca-S6-ngM" firstAttribute="leading" secondItem="9CM-il-0Qt" secondAttribute="trailing" constant="8" id="LfY-bR-pKe"/>
+                    <constraint firstItem="Jca-S6-ngM" firstAttribute="centerY" secondItem="9CM-il-0Qt" secondAttribute="centerY" id="RVX-MD-E7t"/>
+                    <constraint firstItem="kRG-bJ-aLf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="e8M-PM-x8c"/>
+                    <constraint firstAttribute="bottom" secondItem="iHa-za-QmP" secondAttribute="bottom" constant="16" id="oz3-mL-klB"/>
+                    <constraint firstItem="9CM-il-0Qt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="qM2-g7-YfR"/>
+                    <constraint firstItem="iHa-za-QmP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="qR6-HF-dKv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="browseCount" destination="DO1-f0-8Z1" id="EQK-ir-aUa"/>
+                <outlet property="goodsBriefLbl" destination="kRG-bJ-aLf" id="kOM-OM-9Go"/>
+                <outlet property="nowPrice" destination="9CM-il-0Qt" id="Wp7-1o-mpO"/>
+                <outlet property="originalPrice" destination="Jca-S6-ngM" id="HLp-Fn-Eac"/>
+                <outlet property="province" destination="iHa-za-QmP" id="doj-qy-mHk"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="104.5"/>
+        </tableViewCell>
+    </objects>
+</document>

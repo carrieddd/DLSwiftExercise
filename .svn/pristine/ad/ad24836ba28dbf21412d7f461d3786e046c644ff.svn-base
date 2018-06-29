@@ -1,0 +1,60 @@
+//
+//  DLlPersonalGoodsGrid.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/6/22.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import UIKit
+
+class DLlPersonalGoodsGrid: DLBaseViewController {
+    
+    var nowClassName = [String]()
+    var surplusClassName = [String]()
+    
+    var collectionView : UICollectionView?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width:80,height:35)
+        //列间距,行间距,偏移
+        layout.minimumInteritemSpacing = 15
+        layout.minimumLineSpacing = 30
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        
+        collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: layout)
+        collectionView?.delegate = self
+        collectionView?.dataSource = self;
+        //注册一个cell
+        collectionView?.register(UINib.init(nibName: "DLGoodsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "DLGoodsCollectionCell")
+        self.view.addSubview(collectionView!)
+//        saveData()
+    }
+}
+
+extension DLlPersonalGoodsGrid:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return nowClassName.count
+        }else {
+            return surplusClassName.count
+        }
+        
+    }
+    
+    //分区个数
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    //自定义cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DLGoodsCollectionCell", for: indexPath) as! DLGoodsCollectionCell
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+}

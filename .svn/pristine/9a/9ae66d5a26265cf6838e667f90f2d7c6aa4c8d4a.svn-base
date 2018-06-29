@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="247" id="KGk-i7-Jjw" customClass="DLProductDetialImgGroup" customModule="LJSecondhandPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="246.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品详情" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGm-nB-ClU" customClass="DLDefaultLabel_h1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="69.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品详情描述，商品详情描述，商品详情描述，商品详情描述，商品详情描述，商品详情描述，" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3M-No-SHu" customClass="DLDefaultLabel_h2" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="12" y="44.5" width="296" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-Wz-4gK" customClass="DLDefaultBG" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="192.5" width="320" height="54"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsF-bv-fR5" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="NeJ-3L-dTE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="担保交易" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyF-RN-oFr" customClass="DLDefaultLabel_h1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="12" y="16" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwf-zO-pkw">
+                                <rect key="frame" x="81.5" y="1" width="226.5" height="53"/>
+                                <state key="normal" image="next_gray"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bwf-zO-pkw" secondAttribute="trailing" constant="12" id="154-3b-p3B"/>
+                            <constraint firstItem="oyF-RN-oFr" firstAttribute="leading" secondItem="cHM-Wz-4gK" secondAttribute="leading" constant="12" id="5SE-3l-lIf"/>
+                            <constraint firstItem="qsF-bv-fR5" firstAttribute="top" secondItem="cHM-Wz-4gK" secondAttribute="top" id="D79-2p-ihG"/>
+                            <constraint firstAttribute="bottom" secondItem="Bwf-zO-pkw" secondAttribute="bottom" id="Hgr-X0-449"/>
+                            <constraint firstItem="qsF-bv-fR5" firstAttribute="leading" secondItem="cHM-Wz-4gK" secondAttribute="leading" id="KtV-Ir-biz"/>
+                            <constraint firstItem="Bwf-zO-pkw" firstAttribute="top" secondItem="qsF-bv-fR5" secondAttribute="bottom" id="Ktp-Bi-jGX"/>
+                            <constraint firstAttribute="trailing" secondItem="qsF-bv-fR5" secondAttribute="trailing" id="Lw1-Kr-w5L"/>
+                            <constraint firstItem="oyF-RN-oFr" firstAttribute="centerY" secondItem="cHM-Wz-4gK" secondAttribute="centerY" id="U7r-6Y-DQ5"/>
+                            <constraint firstItem="Bwf-zO-pkw" firstAttribute="leading" secondItem="oyF-RN-oFr" secondAttribute="trailing" id="U8y-MS-bbv"/>
+                            <constraint firstAttribute="height" constant="54" id="jMr-vS-7aM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cHM-Wz-4gK" secondAttribute="trailing" id="9VU-su-A5f"/>
+                    <constraint firstItem="cHM-Wz-4gK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fod-xV-rXz"/>
+                    <constraint firstItem="uGm-nB-ClU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="RJC-DV-XaX"/>
+                    <constraint firstAttribute="trailing" secondItem="V3M-No-SHu" secondAttribute="trailing" constant="12" id="Vex-8G-fNg"/>
+                    <constraint firstItem="V3M-No-SHu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Xrn-4o-NLx"/>
+                    <constraint firstItem="uGm-nB-ClU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="aA2-MV-pIZ"/>
+                    <constraint firstItem="V3M-No-SHu" firstAttribute="top" secondItem="uGm-nB-ClU" secondAttribute="bottom" constant="12" id="d2d-8n-ISL"/>
+                    <constraint firstAttribute="bottom" secondItem="cHM-Wz-4gK" secondAttribute="bottom" id="sln-dn-pFX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="goodsBriefLbl" destination="V3M-No-SHu" id="DaE-Yk-tL5"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="16.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="next_gray" width="15" height="15"/>
+    </resources>
+</document>

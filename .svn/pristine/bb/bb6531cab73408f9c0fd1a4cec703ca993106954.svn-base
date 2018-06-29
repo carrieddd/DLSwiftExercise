@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Personal/Controller/saled/DLMySaleList.swift"
+            timestampString = "550145628.830716"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+            timestampString = "550490694.53598"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "configure(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LJSecondhandPlatform.DLInfoMobileController.configure(__ObjC.UIButton) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+                  timestampString = "551787635.5052741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "6456">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in LJSecondhandPlatform.DLInfoMobileController.configure(__ObjC.UIButton) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+                  timestampString = "551787635.506992"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+            timestampString = "550490694.53608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "configure(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in LJSecondhandPlatform.DLInfoMobileController.configure(__ObjC.UIButton) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+                  timestampString = "551787635.5126441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in LJSecondhandPlatform.DLInfoMobileController.configure(__ObjC.UIButton) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Personal/Controller/infoconfigure/DLInfoMobileController.swift"
+                  timestampString = "551787635.5145921"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Public/Controller/DLPublicReviewController.swift"
+            timestampString = "551094273.6517169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "publicGoods()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; () in LJSecondhandPlatform.DLPublicReviewController.publicGoods() -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Public/Controller/DLPublicReviewController.swift"
+                  timestampString = "551787635.522344"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1280">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in closure #1 (Swift.String, Swift.String) -&gt; () in LJSecondhandPlatform.DLPublicReviewController.publicGoods() -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Public/Controller/DLPublicReviewController.swift"
+                  timestampString = "551787635.524346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Public/Controller/DLPublicController.swift"
+            timestampString = "551182136.717286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "releaseGoods()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; () in LJSecondhandPlatform.DLPublicController.releaseGoods() -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Public/Controller/DLPublicController.swift"
+                  timestampString = "551787635.5294141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "6736">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in closure #1 (Swift.String, Swift.String) -&gt; () in LJSecondhandPlatform.DLPublicController.releaseGoods() -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Public/Controller/DLPublicController.swift"
+                  timestampString = "551787635.531181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Vendor/Pay/DLPayManager.swift"
+            timestampString = "551787634.637713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "dl_alipay(orderStr:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Vendor/Pay/DLPayManager.swift"
+            timestampString = "551787634.637782"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "dl_wxpay(orderStr:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+            timestampString = "551787634.63787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "wechatOrQQLogRequest(_:resp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LJSecondhandPlatform.DLLoginController.(wechatOrQQLogRequest in _4C9A429B75EBD02AB7DC1767BB634F45)(Swift.Int, resp: __ObjC.UMSocialUserInfoResponse) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+                  timestampString = "551787635.543656"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "1256">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in LJSecondhandPlatform.DLLoginController.(wechatOrQQLogRequest in _4C9A429B75EBD02AB7DC1767BB634F45)(Swift.Int, resp: __ObjC.UMSocialUserInfoResponse) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+                  timestampString = "551787635.545841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+            timestampString = "551787634.637923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "wechatOrQQLogRequest(_:resp:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; () in LJSecondhandPlatform.DLLoginController.(wechatOrQQLogRequest in _4C9A429B75EBD02AB7DC1767BB634F45)(Swift.Int, resp: __ObjC.UMSocialUserInfoResponse) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+                  timestampString = "551787635.550747"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in LJSecondhandPlatform.DLLoginController.(wechatOrQQLogRequest in _4C9A429B75EBD02AB7DC1767BB634F45)(Swift.Int, resp: __ObjC.UMSocialUserInfoResponse) -&gt; ()"
+                  moduleName = "LJSecondhandPlatform"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios110/Desktop/svn_%E9%97%B2%E7%BD%AE%E5%93%81/LJSecondhandPlatform/LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+                  timestampString = "551787635.552541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+            timestampString = "551787634.637972"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "qqwxLogin(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Moudle/Login/Controller/DLLoginController.swift"
+            timestampString = "551787634.638019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "wechatOrQQLogRequest(_:resp:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LJSecondhandPlatform/Vendor/DLLocateManager.swift"
+            timestampString = "551787634.638072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

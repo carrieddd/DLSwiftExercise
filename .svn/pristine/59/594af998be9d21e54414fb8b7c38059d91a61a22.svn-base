@@ -1,0 +1,241 @@
+//
+//  DLPersonalViewController.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/5/28.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+import CRRefresh
+
+class DLPersonalController: DLBaseTableViewController {
+
+    let head:DLPersonalHead = Bundle.main.loadNibNamed("DLPersonalHead", owner: nil, options: nil)?.first as! DLPersonalHead
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Addnotification()
+        datasource = [("我卖出的","personalIcon_0"),
+                     ("我买到的","personalIcon_1"),
+                     ("我发布的","personalIcon_2"),
+                     ("我想要的","personalIcon_3"),
+//                     ("我关注的","personalIcon_4"),
+//                     ("邀请好友","personalIcon_5"),
+//                     ("个人资料","personalIcon_6"),
+        ]
+        DLUserInfo.verifyToken()
+        
+    }
+    
+    override func initTableView() {
+        super.initTableView()
+        let headView:UIView = {
+            ()->UIView in
+            let head1:UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width:dScreenW, height: 260))
+            head1.addSubview(head)
+            head.snp.makeConstraints({ (make) in
+                make.edges.equalTo(head1)
+            })
+            return head1
+        }()
+        head.delegate = self
+        tableView.tableHeaderView = headView
+        tableView.registerNib(nibName: "DLDefaultCell")
+//        tableView.cr.addHeadRefresh(animator:FastAnimator()) { [weak self] in
+//        }
+        tableView.cr.addHeadRefresh {
+            if !DLUserInfo.verifyToken(){
+                self.tableView.cr.endHeaderRefresh()
+            }
+        }
+    }
+    
+    override func initNavigationBar() {
+        let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
+        let statusBar : UIView = statusBarWindow.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = UIColor.clear
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        get {
+            return.lightContent
+            
+        }}
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+extension DLPersonalController:DLPersonalHeadDelegate{
+    func turnMoney() {
+        guard let adress = systemOption?.user_balance , DLUserInfo.verifyToken() else {
+            return
+        }
+        let p = DLWKWebBaseViewController.init(urlStr: "\(adress)?token=\(DLUserInfo.share.token ?? "")")
+        p.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(p, animated: true)
+    }
+    
+    func turnPoint() {
+    }
+    
+    func turnVerify() {
+        guard let adress = systemOption?.alipay_info , DLUserInfo.verifyToken() else {
+            return
+        }
+        
+        let p = DLWKWebBaseViewController.init(urlStr: "\(adress)?token=\(DLUserInfo.share.token ?? "")&isSet=\( DLUserInfo.share.userModel?.isalipaysure ?? 0)")
+        p.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(p, animated: true)
+    }
+    
+    
+    func avaterClick() {
+        
+        guard DLUserInfo.verifyToken() else {
+            return
+        }
+
+        let v = DLPersonalInfoController.init(tableStyle: .grouped)
+        v.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(v, animated: true)
+    }
+
+}
+
+extension DLPersonalController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datasource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:DLDefaultCell = tableView.dequeueReusableCell(withIdentifier: "DLDefaultCell") as! DLDefaultCell
+        let value:(title:String,img:String) = self.datasource[indexPath.row] as! (title: String, img: String)
+        cell.labelL.text = value.title
+        cell.imgL.image = UIImage.init(named: value.img)
+        
+        switch indexPath.row {
+        case 0:
+            cell.labelR.text = DLUserInfo.share.userModel?.sellednum == 0 ? "":"\(DLUserInfo.share.userModel?.sellednum ?? 0)"
+        case 1:
+            cell.labelR.text = DLUserInfo.share.userModel?.buyednum == 0 ? "":"\(DLUserInfo.share.userModel?.buyednum ?? 0)"
+        case 2:
+            cell.labelR.text = DLUserInfo.share.userModel?.onsalegoods == 0 ? "":"\(DLUserInfo.share.userModel?.onsalegoods ?? 0)"
+        case 3:
+            cell.labelR.text = DLUserInfo.share.userModel?.favoritenum == 0 ? "":"\(DLUserInfo.share.userModel?.favoritenum ?? 0)"
+        default:
+            break
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard DLUserInfo.verifyToken() else {
+            return
+        }
+        switch indexPath.row {
+        case 0:
+            let vc = DLMySaleController.init(type:.sale)
+            vc.hidesBottomBarWhenPushed = true
+            vc.navigationItem.title = "我卖出的"
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = DLMySaleController.init(type:.buy)
+            vc.navigationItem.title = "我买到的"
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            let vc = DLMyPublicController.init()
+            vc.navigationItem.title = "我发布的"
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 3:
+            let vc = DLMyFavoriteController.init()
+            vc.navigationItem.title = "我想要的"
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        default:
+            break
+        }
+    }    
+}
+
+
+extension DLPersonalController{
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.navigationController?.navigationBar.isHidden = true
+//        self.initNavigationBar()
+//        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+//
+//    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.initNavigationBar()
+       UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+        super.initNavigationBar()
+        UIApplication.shared.setStatusBarStyle(.default, animated: true)
+
+    }
+
+    func Addnotification(){
+        NotificationCenter.default.rx.notification(N_users_getusermsg).takeUntil(self.rx.deallocated).subscribe { [weak self](notification) in
+            self?.uploadUI()
+            print("更新userinfo")
+        }
+        NotificationCenter.default.rx.notification(N_users_logout).takeUntil(self.rx.deallocated).subscribe { [weak self](notification) in
+            self?.uploadUI()
+            print("更新userinfo")
+        }
+        NotificationCenter.default.rx.notification(N_users_publicGoods).takeUntil(self.rx.deallocated).subscribe { [weak self](notification) in
+            self?.tableView.cr.beginHeaderRefresh()
+            print("更新userinfo 发布成功")
+        }
+        
+        NotificationCenter.default.rx.notification(N_paysucceed_upload).takeUntil(self.rx.deallocated).subscribe { [weak self](notification) in
+            self?.tableView.cr.beginHeaderRefresh()
+            print("更新userinfo 购买成功")
+
+        }
+    }
+    
+    func uploadUI() {
+    self.head.avater.setImage(UIImage.init(named: "avater_d"), for: .normal)
+    self.head.avater.setImageWith(URL.init(string:DLUserInfo.share.userModel?.avatar ?? ""), for: .normal, placeholder: UIImage.init(named: "avater_d"))
+        self.head.balanceLbl.text = DLUserInfo.share.userModel?.balance ?? "0"
+        self.head.pointsLbl.text = DLUserInfo.share.userModel?.points ?? "0"
+        self.head.username.text = NSString.isEmpty(DLUserInfo.share.userModel?.nickname) ?
+            DLUserInfo.share.userModel?.username ?? "" :
+            DLUserInfo.share.userModel?.nickname ?? ""
+        
+        if !DLUserInfo.verifyToken(uploadUser: false) {
+            self.head.username.text = "请登录"
+        }
+        
+        if DLUserInfo.share.userModel?.isalipaysure == 0{
+            self.head.statusLbl.text = "您还没有认证，认证后才可以发布闲置品~"
+        }else{
+            self.head.statusLbl.text = "您已认证，快去发布商品吧~"
+        }
+        self.head.statusBtn.status = DLUserInfo.share.userModel?.isalipaysure ?? 0
+        self.tableView.reloadData()
+        self.tableView.cr.endHeaderRefresh()
+    }
+}

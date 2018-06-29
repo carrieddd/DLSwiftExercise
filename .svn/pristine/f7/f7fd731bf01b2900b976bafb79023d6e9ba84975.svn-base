@@ -1,0 +1,129 @@
+//
+//  DLDefaultButton.swift
+//  LJSecondhandPlatform
+//
+//  Created by iOS110 on 2018/5/28.
+//  Copyright © 2018年 iOS110. All rights reserved.
+//
+
+import Foundation
+
+class C99Btn_15: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTHGARY_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 15)
+    }
+}
+
+
+class DLDefaultButton_h0: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTHGARY_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 14)
+    }
+}
+
+class DLDefaultButton_h3: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTDARK_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 14)
+    }
+}
+
+class C66Btn_14: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTHGARY_2, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 14)
+    }
+}
+
+class C99Btn_13: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTHGARY_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 13)
+    }
+}
+
+class OrangeBtn_13: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTORANGE_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 13)
+    }
+}
+
+class DLDefaultButton_h1: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(TEXTHGARY_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 12)
+        
+    }
+}
+
+class DLMobileCodeButton: TimeButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    
+    func _setup() {
+        self.setTitleColor(DefaultRed, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 12)
+        ViewBoardRadius(view: self, radius: 3, width: 1, color: DefaultRed)
+    }
+}
+
+class DLDarkRadiusButton: TimeButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    
+    func _setup() {
+        self.setTitleColor(TEXTDARK_1, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 12)
+        ViewBoardRadius(view: self, radius: 3, width: 1, color: TEXTDARK_1)
+    }
+}
+
+
+class DLDefaultButton: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self._setup()
+    }
+    func _setup() {
+        self.setTitleColor(UIColor.white, for: .normal)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Regular", size: 17)
+        self.setBackgroundImage(UIImage.init(named: "personal_bg"), for: .normal)
+        ViewRadius(view: self, radius: 4)
+    }
+}
+

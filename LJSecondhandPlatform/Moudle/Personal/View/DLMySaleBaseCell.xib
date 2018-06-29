@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DLMySaleBaseCell" rowHeight="246" id="KGk-i7-Jjw" customClass="DLMySaleBaseCell" customModule="LJSecondhandPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="245.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJr-8D-moG" customClass="DLDefaultBG" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4d-PA-RUU" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="37" width="320" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2xA-cG-DYH"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avater_d" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-dU-5YE">
+                                <rect key="frame" x="12" y="7" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="5k2-Jy-Wps"/>
+                                    <constraint firstAttribute="height" constant="24" id="R0S-t1-bfe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="无情的东哥哥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U45-iA-ibW" customClass="DLDefaultLabel_h1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="42" y="6.5" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待卖家发货" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1l-Zz-Eww" customClass="DLStatusLabel_1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="204" y="8.5" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="1sQ-LE-1CX"/>
+                            <constraint firstItem="U45-iA-ibW" firstAttribute="centerY" secondItem="cQW-dU-5YE" secondAttribute="centerY" id="7BJ-Nn-CBb"/>
+                            <constraint firstItem="cQW-dU-5YE" firstAttribute="leading" secondItem="uJr-8D-moG" secondAttribute="leading" constant="12" id="9xU-xo-ibm"/>
+                            <constraint firstAttribute="bottom" secondItem="O4d-PA-RUU" secondAttribute="bottom" id="G40-6f-xpz"/>
+                            <constraint firstItem="X1l-Zz-Eww" firstAttribute="centerY" secondItem="U45-iA-ibW" secondAttribute="centerY" id="K9v-vX-Khb"/>
+                            <constraint firstItem="U45-iA-ibW" firstAttribute="leading" secondItem="cQW-dU-5YE" secondAttribute="trailing" constant="6" id="LES-CZ-rcd"/>
+                            <constraint firstAttribute="trailing" secondItem="X1l-Zz-Eww" secondAttribute="trailing" constant="12" id="N8v-BQ-AXV"/>
+                            <constraint firstItem="cQW-dU-5YE" firstAttribute="centerY" secondItem="uJr-8D-moG" secondAttribute="centerY" id="Zka-S6-fCw"/>
+                            <constraint firstAttribute="trailing" secondItem="O4d-PA-RUU" secondAttribute="trailing" id="fC6-RK-kQw"/>
+                            <constraint firstItem="O4d-PA-RUU" firstAttribute="leading" secondItem="uJr-8D-moG" secondAttribute="leading" id="hmx-dC-KEu"/>
+                        </constraints>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAb-5r-pwh" customClass="DLDefaultBG" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="193.5" width="320" height="52"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSU-UO-l5B" customClass="DLMobileCodeButton" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="230" y="13.5" width="78" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="2uF-ag-UAb"/>
+                                </constraints>
+                                <state key="normal" title="  确认收货  "/>
+                                <connections>
+                                    <action selector="chickButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AYk-hO-pUI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0e-fa-MmP" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="8" y="0.0" width="312" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fXq-kP-x5O"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A0e-fa-MmP" firstAttribute="top" secondItem="sAb-5r-pwh" secondAttribute="top" id="Bqr-G3-xW3"/>
+                            <constraint firstItem="PSU-UO-l5B" firstAttribute="centerY" secondItem="sAb-5r-pwh" secondAttribute="centerY" id="PW7-PQ-N97"/>
+                            <constraint firstAttribute="trailing" secondItem="PSU-UO-l5B" secondAttribute="trailing" constant="12" id="R7R-ZO-45G"/>
+                            <constraint firstItem="A0e-fa-MmP" firstAttribute="leading" secondItem="sAb-5r-pwh" secondAttribute="leading" constant="8" id="SLp-g6-mg6"/>
+                            <constraint firstAttribute="trailing" secondItem="A0e-fa-MmP" secondAttribute="trailing" id="Xbz-H8-PM4"/>
+                            <constraint firstAttribute="height" constant="52" id="wLE-l2-Ra9"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msy-2o-WBc" customClass="DLDefaultBG" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="153.5" width="320" height="40"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypf-fi-7Y3" customClass="DLLine" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qee-c5-3x7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="实付款：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQD-6H-haA" customClass="DLDefaultLabel_h2" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="197.5" y="9" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥375" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-79-rzy" customClass="DLDefaultLabel_h0" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="267" y="9" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="7lU-L8-oYh"/>
+                            <constraint firstItem="ypf-fi-7Y3" firstAttribute="leading" secondItem="Msy-2o-WBc" secondAttribute="leading" id="Iu8-N4-W2F"/>
+                            <constraint firstItem="rQD-6H-haA" firstAttribute="centerY" secondItem="hj5-79-rzy" secondAttribute="centerY" id="IxZ-lC-XGI"/>
+                            <constraint firstItem="hj5-79-rzy" firstAttribute="centerY" secondItem="Msy-2o-WBc" secondAttribute="centerY" id="TIr-vj-iBD"/>
+                            <constraint firstAttribute="trailing" secondItem="ypf-fi-7Y3" secondAttribute="trailing" id="b2k-0j-8ug"/>
+                            <constraint firstAttribute="trailing" secondItem="hj5-79-rzy" secondAttribute="trailing" constant="12" id="mWw-HB-Edf"/>
+                            <constraint firstItem="ypf-fi-7Y3" firstAttribute="top" secondItem="Msy-2o-WBc" secondAttribute="top" id="rP8-VZ-mMC"/>
+                            <constraint firstItem="hj5-79-rzy" firstAttribute="leading" secondItem="rQD-6H-haA" secondAttribute="trailing" id="tDe-pQ-Ien"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpC-WI-155" customClass="DLDefaultBG" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="38" width="320" height="115.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gnJ-2x-IKN">
+                                <rect key="frame" x="12" y="8" width="99.5" height="99.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gnJ-2x-IKN" secondAttribute="height" multiplier="1:1" id="RJ9-gY-Nmd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这宝贝用了70多年，也算古董。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tom-ab-xW1" customClass="DLDefaultLabel_h1" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                                <rect key="frame" x="123.5" y="12" width="184.5" height="91.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gnJ-2x-IKN" firstAttribute="leading" secondItem="XpC-WI-155" secondAttribute="leading" constant="12" id="5hN-gn-PzE"/>
+                            <constraint firstItem="Tom-ab-xW1" firstAttribute="leading" secondItem="gnJ-2x-IKN" secondAttribute="trailing" constant="12" id="CLK-kZ-sFg"/>
+                            <constraint firstItem="gnJ-2x-IKN" firstAttribute="top" secondItem="XpC-WI-155" secondAttribute="top" constant="8" id="Jzg-1C-hU5"/>
+                            <constraint firstItem="Tom-ab-xW1" firstAttribute="top" secondItem="XpC-WI-155" secondAttribute="top" constant="12" id="RUx-5i-EuT"/>
+                            <constraint firstAttribute="bottom" secondItem="gnJ-2x-IKN" secondAttribute="bottom" constant="8" id="VGr-zM-ftu"/>
+                            <constraint firstAttribute="bottom" secondItem="Tom-ab-xW1" secondAttribute="bottom" constant="12" id="mBW-hx-w6C"/>
+                            <constraint firstAttribute="trailing" secondItem="Tom-ab-xW1" secondAttribute="trailing" constant="12" id="wjz-sL-M1F"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uJr-8D-moG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0hl-jC-TYa"/>
+                    <constraint firstItem="sAb-5r-pwh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5mf-sa-Hzb"/>
+                    <constraint firstItem="XpC-WI-155" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9Rv-0q-RTj"/>
+                    <constraint firstAttribute="bottom" secondItem="sAb-5r-pwh" secondAttribute="bottom" id="HEX-O6-0Wq"/>
+                    <constraint firstItem="Msy-2o-WBc" firstAttribute="top" secondItem="XpC-WI-155" secondAttribute="bottom" id="NZE-z6-n2h"/>
+                    <constraint firstAttribute="trailing" secondItem="XpC-WI-155" secondAttribute="trailing" id="S9e-1Q-3aY"/>
+                    <constraint firstItem="XpC-WI-155" firstAttribute="top" secondItem="uJr-8D-moG" secondAttribute="bottom" id="fIy-WI-5Ga"/>
+                    <constraint firstItem="Msy-2o-WBc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="k8W-WT-hG3"/>
+                    <constraint firstAttribute="trailing" secondItem="sAb-5r-pwh" secondAttribute="trailing" id="lYj-Db-m4u"/>
+                    <constraint firstItem="sAb-5r-pwh" firstAttribute="top" secondItem="Msy-2o-WBc" secondAttribute="bottom" id="ntN-9o-3KV"/>
+                    <constraint firstAttribute="trailing" secondItem="Msy-2o-WBc" secondAttribute="trailing" id="rY0-2Z-vYt"/>
+                    <constraint firstAttribute="trailing" secondItem="uJr-8D-moG" secondAttribute="trailing" id="yi3-i8-9i2"/>
+                    <constraint firstItem="uJr-8D-moG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zcV-3D-jJC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatar" destination="cQW-dU-5YE" id="VyF-e9-dz2"/>
+                <outlet property="bottomHeight" destination="wLE-l2-Ra9" id="OA0-3A-cie"/>
+                <outlet property="chickItem" destination="PSU-UO-l5B" id="fg4-BW-ciV"/>
+                <outlet property="goods_brief" destination="Tom-ab-xW1" id="nRl-wl-RzO"/>
+                <outlet property="goods_image" destination="gnJ-2x-IKN" id="CS0-SF-6F2"/>
+                <outlet property="nickname" destination="U45-iA-ibW" id="P9W-eD-88W"/>
+                <outlet property="now_price" destination="hj5-79-rzy" id="R7Q-G6-OLN"/>
+                <outlet property="status" destination="X1l-Zz-Eww" id="zkR-l5-8bF"/>
+            </connections>
+            <point key="canvasLocation" x="-31" y="120"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avater_d" width="16" height="16"/>
+        <image name="placeholder" width="170" height="170"/>
+    </resources>
+</document>

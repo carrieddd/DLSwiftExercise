@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DLPersoanllisetCell" rowHeight="110" id="KGk-i7-Jjw" customClass="DLPersoanllisetCell" customModule="LJSecondhandPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avater_d" translatesAutoresizingMaskIntoConstraints="NO" id="wIa-RL-5I2">
+                        <rect key="frame" x="12" y="30" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2vO-kv-1jb"/>
+                            <constraint firstAttribute="height" constant="50" id="H8e-l9-ZqI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZY-ks-ahE" customClass="DLDefaultLabel_h0" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="74" y="30" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWm-Ww-LhD" customClass="C99Lbl_14" customModule="LJSecondhandPlatform" customModuleProvider="target">
+                        <rect key="frame" x="74" y="59" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cef-bG-jdy">
+                        <rect key="frame" x="233" y="40" width="79" height="30"/>
+                        <state key="normal" image="relationBtn1"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aZY-ks-ahE" firstAttribute="top" secondItem="wIa-RL-5I2" secondAttribute="top" id="3ia-uo-TTp"/>
+                    <constraint firstItem="AWm-Ww-LhD" firstAttribute="leading" secondItem="aZY-ks-ahE" secondAttribute="leading" id="55Q-0h-iLQ"/>
+                    <constraint firstItem="cef-bG-jdy" firstAttribute="centerY" secondItem="wIa-RL-5I2" secondAttribute="centerY" id="8ig-D1-r6E"/>
+                    <constraint firstAttribute="trailing" secondItem="cef-bG-jdy" secondAttribute="trailing" constant="12" id="Eud-SN-OsS"/>
+                    <constraint firstItem="wIa-RL-5I2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Gxr-Zu-TtT"/>
+                    <constraint firstItem="wIa-RL-5I2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M78-Oh-rFX"/>
+                    <constraint firstItem="aZY-ks-ahE" firstAttribute="leading" secondItem="wIa-RL-5I2" secondAttribute="trailing" constant="12" id="sTF-jp-xyE"/>
+                    <constraint firstItem="AWm-Ww-LhD" firstAttribute="bottom" secondItem="wIa-RL-5I2" secondAttribute="bottom" id="yFU-qI-3v2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatar" destination="wIa-RL-5I2" id="brE-Xh-usy"/>
+                <outlet property="followNum" destination="AWm-Ww-LhD" id="QaE-q8-X4A"/>
+                <outlet property="nickName" destination="aZY-ks-ahE" id="X51-pr-JkM"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="87"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="avater_d" width="60" height="60"/>
+        <image name="relationBtn1" width="79" height="30"/>
+    </resources>
+</document>
